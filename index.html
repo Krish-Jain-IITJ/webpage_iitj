@@ -416,6 +416,35 @@
     .sidebar::-webkit-scrollbar { width: 4px; }
     .sidebar::-webkit-scrollbar-track { background: var(--sidebar-bg); }
     .sidebar::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    /* Mobile responsiveness */
+    @media (max-width: 850px) {
+      body { height: auto; overflow: auto; }
+      .top-bar { padding: 0 12px; }
+      .top-bar .title { font-size: 13px; }
+      .top-bar .iitj-badge { display: none; }
+      
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); height: auto; }
+      .sidebar-photo { padding: 15px; }
+      .photo-frame { width: 100px; height: 100px; }
+      .prof-name { font-size: 18px; }
+      
+      .nav-section { display: flex; flex-wrap: wrap; justify-content: center; padding: 10px; gap: 5px; }
+      .nav-label, .nav-divider, .sidebar-search { display: none; }
+      .nav-item { padding: 8px 12px; border-radius: 6px; border-left: none; font-size: 12px; background: #111; }
+      .nav-item.active { border-bottom: 2px solid #fff; background: var(--sidebar-active-bg); }
+      .nav-item:hover { transform: none; }
+
+      .content-area { height: auto; overflow: visible; }
+      .page { padding-bottom: 40px; display: none; } /* Reset display for JS */
+      .page.active { display: block; animation: none; }
+      .page-header-bar { padding: 20px; text-align: center; }
+      .page-header-bar h1 { font-size: 22px; }
+      .page-body { padding: 20px; }
+      
+      .card-grid { grid-template-columns: 1fr; }
+      .person-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    }
   </style>
 </head>
 <body>
